@@ -18,6 +18,7 @@
             '';
             meta = with pkgs.lib; {
               description = "Useful mac apps";
+              homepage = "https://github.com/NewDawn0/mac-apps-archive";
               platforms = platforms.darwin;
             };
           };
