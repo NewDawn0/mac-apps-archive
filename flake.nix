@@ -6,6 +6,9 @@
   outputs = { self, nixpkgs, }:
     let eachSystem = nixpkgs.lib.genAttrs [ "x86_64-darwin" "aarch64-darwin" ];
     in {
+      overlays.default = (final: prev: {
+        mac-apps-archive = self.packages.${prev.system}.default;
+      });
       packages = eachSystem (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
