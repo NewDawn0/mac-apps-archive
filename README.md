@@ -24,9 +24,6 @@ nix profile install .
        mac-apps-archive = {
          url = "github:NewDawn0/mac-apps-archive";
          inputs.nixpkgs.follows = "nixpkgs";
-         # Optional: If you use nix-systems
-         inputs.nix-systems.follows = "nix-systems";
-         inputs.rust-overlay.follows = "rust-overlay";
        };
      };
    }
